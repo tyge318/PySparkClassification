@@ -1,4 +1,4 @@
-** Sentiment Classification Using NaiveBayes on PySpark
+## Sentiment Classification Using NaiveBayes on PySpark
 This code demos how to use PySpark and its built-in mllib to perform simple sentiment classification task.  
 There are actually two dimensions of polarity: (a) positive or negative (b) truthful or deceptive.  
 In this implementation, these two dimensions were combined to form a 4-class classification task.  
@@ -10,7 +10,7 @@ The "Data" folder contains all the data we need:
 The two training set folders each contain two sub-folder for the second dimension (truthful or deceptive).  
 The text file "CorrectResult.txt" stores the correct labels for posts in the developing set.  
 
-*** Code Flow
+### Code Flow
 I. Preprocessing
 	Since the data are texts in natural langauge, we need to perform some preprocessing and convert them to label, features pairs.
 	Here I only did stop word and punctuation removal. One can also applied packages such as NLTK to perform more sophiticated preprocessing like stemming to increase accuracy. I didn't do it here.  
