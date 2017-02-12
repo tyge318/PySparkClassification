@@ -15,7 +15,7 @@ I. Preprocessing
 	Since the data are texts in natural langauge, we need to perform some preprocessing and convert them to label, features pairs.
 	Here I only did stop word and punctuation removal. One can also applied packages such as NLTK to perform more sophiticated preprocessing like stemming to increase accuracy. I didn't do it here.  
 	Punctuation removal is merely a regular expression matching task.  
-	For the stop word removal task, I collected a list of common English stop words and store them in a set for O(1) lookup.
+	For the stop word removal task, I collected a list of common English stop words and store them in a set for O(1) lookup.  
 II. Get Features
 	A simple feature to be used is unigram. That is, treating each single word as a dimension of the feature vector, and the word occurrence as its value. Of course one can use other features like bigram, trigram, TFIDF, etc.  
 	The feature vectors for most NLP tasks are likely to be one with large dimensions, so it's better to store them in SparseVector data structure. The SparseVector constructor accepts python dictionary. Hence, here I first mapped the word (unigram) to an integer id, and then use this id and word occurance as the key, value pair for the feature vector. In gathering the word occurance, I also traced the max occurance for each word. This is to be used for later normalization.   
